@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/paypal.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="header">
+
+            <!-- header phần top -->
+            <div class="header_top">
+                <!-- bên trái menu -->
+                <div class="header_top_right">
+                    <nav class="navbar navbar-expand-sm navbar-dark">
+
+                        <!-- Toggler/collapsibe Button -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#collapsibleNavbar">
+                            <span>Links<i class='bx bxs-down-arrow'></i></span>
+                        </button>
+
+                        <!-- Navbar links -->
+                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="color-a dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        USD
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">EUR</a></li>
+                                        <li><a class="dropdown-item" href="#">USD</a></li>
+                                        <li><a class="dropdown-item" href="#">VND</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="color-a dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        English
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">France</a></li>
+                                        <li><a class="dropdown-item" href="#">English</a></li>
+                                        <li><a class="dropdown-item" href="#">VietNamese</a></li>
+                                    </ul>
+                                </li>
+
+
+                                <li class="nav-item dropdown">
+                                    <a class="color-a" href="login.html">
+                                        Sing In / Sing Up
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- bên phải menu -->
+                <div class="header_top_left">
+                    <p><i class='bx bx-phone'></i>0123.456.789</p>
+                </div>
+            </div>
+
+
+
+            <!-- header-mid -->
+            <div class="header_mid">
+                <div class="logo_header">
+
+                    <img src="src/img/logoHC.png" width="100px" alt="">
+
+                </div>
+                <div class="icon_header_mid">
+                    <div class="compare center">
+                        <i class='bx bx-git-compare bx-rotate-90'></i>
+                        <p>Compare</p>
+                    </div>
+                    <div class="heart center">
+                        <i class='bx bx-heart'></i>
+                        <p>Heart</p>
+                    </div>
+                    <div class="cartnew center">
+                        <i class='bx bx-cart'></i>
+                        <p>Cart</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="header_bottom">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+
+                        <a class="navbar-brand" href="#">TẤT CẢ</a>
+                        <button class="navbar-toggler btn" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span><i class='bx bx-menu-alt-left'></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarScroll">
+                            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                                style="--bs-scroll-height: 100px;">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Điện Thoại
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Iphone</a></li>
+                                        <li><a class="dropdown-item" href="#">Samsung</a></li>
+                                        <li><a class="dropdown-item" href="#">Vsmart</a></li>
+                                        <li><a class="dropdown-item" href="#">Nokia</a></li>
+                                        <li><a class="dropdown-item" href="#">Vertu</a></li>
+                                        <li><a class="dropdown-item" href="#">Oneplus</a></li>
+                                        <li><a class="dropdown-item" href="#">Oppo</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Laptop
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Samsung</a></li>
+                                        <li><a class="dropdown-item" href="#">Macbook</a></li>
+                                        <li><a class="dropdown-item" href="#">Asus</a></li>
+                                        <li><a class="dropdown-item" href="#">Dell</a></li>
+                                        <li><a class="dropdown-item" href="#">Hp</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Table
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Ipad</a></li>
+                                        <li><a class="dropdown-item" href="#"> Samsung Tab+</a></li>
+                                        <li><a class="dropdown-item" href="#">Xiaomi</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Smartwatch
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Apple Watch</a></li>
+                                        <li><a class="dropdown-item" href="#">Samsung Galaxy Watch</a></li>
+                                        <li><a class="dropdown-item" href="#">Realme Watch</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Đồng Hồ
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Hublot</a></li>
+                                        <li><a class="dropdown-item" href="#"> Rolex</a></li>
+                                        <li><a class="dropdown-item" href="#">Casio</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Phụ Kiện
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Phụ Kiện Di Động</a></li>
+                                        <li><a class="dropdown-item" href="#">Phụ Kiện Máy Tính</a></li>
+                                        <li><a class="dropdown-item" href="#">Phụ Kiện Laptop</a></li>
+                                        <li><a class="dropdown-item" href="#">Phụ Kiện Đồng Hồ</a></li>
+                                        <li><a class="dropdown-item" href="#">Thiết Bị Âm Thanh</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <input class="search_input" type="search" placeholder="Search product..."
+                                    aria-label="Search" required>
+                                <button class="btn_search" type="submit">Search <i
+                                        class='bx bx-right-arrow-alt'></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 class="h3 mb-5 mt-5">Thanh Toán</h1>
+            <div class="row">
+              <!-- Left -->
+              <div class="col-lg-9">
+                <div class="accordion" id="accordionPayment">
+                  <!-- Credit card -->
+                  <div class="accordion-item mb-3">
+                    <h2 class="h5 px-4 py-3 accordion-header d-flex justify-content-between align-items-center">
+                      <div class="form-check w-100 collapsed" data-bs-toggle="collapse" data-bs-target="#collapseCC" aria-expanded="false">
+                        <input class="form-check-input" type="radio" name="payment" id="payment1">
+                        <label class="form-check-label pt-1" for="payment1">
+                          Thẻ Tín Dụng
+                        </label>
+                      </div>
+                      <span>
+                        <svg width="34" height="25" xmlns="http://www.w3.org/2000/svg">
+                          <g fill-rule="nonzero" fill="#333840">
+                            <path d="M29.418 2.083c1.16 0 2.101.933 2.101 2.084v16.666c0 1.15-.94 2.084-2.1 2.084H4.202A2.092 2.092 0 0 1 2.1 20.833V4.167c0-1.15.941-2.084 2.102-2.084h25.215ZM4.203 0C1.882 0 0 1.865 0 4.167v16.666C0 23.135 1.882 25 4.203 25h25.215c2.321 0 4.203-1.865 4.203-4.167V4.167C33.62 1.865 31.739 0 29.418 0H4.203Z"></path>
+                            <path d="M4.203 7.292c0-.576.47-1.042 1.05-1.042h4.203c.58 0 1.05.466 1.05 1.042v2.083c0 .575-.47 1.042-1.05 1.042H5.253c-.58 0-1.05-.467-1.05-1.042V7.292Zm0 6.25c0-.576.47-1.042 1.05-1.042H15.76c.58 0 1.05.466 1.05 1.042 0 .575-.47 1.041-1.05 1.041H5.253c-.58 0-1.05-.466-1.05-1.041Zm0 4.166c0-.575.47-1.041 1.05-1.041h2.102c.58 0 1.05.466 1.05 1.041 0 .576-.47 1.042-1.05 1.042H5.253c-.58 0-1.05-.466-1.05-1.042Zm6.303 0c0-.575.47-1.041 1.051-1.041h2.101c.58 0 1.051.466 1.051 1.041 0 .576-.47 1.042-1.05 1.042h-2.102c-.58 0-1.05-.466-1.05-1.042Zm6.304 0c0-.575.47-1.041 1.051-1.041h2.101c.58 0 1.05.466 1.05 1.041 0 .576-.47 1.042-1.05 1.042h-2.101c-.58 0-1.05-.466-1.05-1.042Zm6.304 0c0-.575.47-1.041 1.05-1.041h2.102c.58 0 1.05.466 1.05 1.041 0 .576-.47 1.042-1.05 1.042h-2.101c-.58 0-1.05-.466-1.05-1.042Z"></path>
+                          </g>
+                        </svg>
+                      </span>
+                    </h2>
+                    <div id="collapseCC" class="accordion-collapse collapse show" data-bs-parent="#accordionPayment" style="">
+                      <div class="accordion-body">
+                        <div class="mb-3">
+                          <label class="form-label">Số thẻ</label>
+                          <input type="text" class="form-control" placeholder="Nhập số thẻ" required>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="mb-3">
+                              <label class="form-label">Tên trên thẻ</label>
+                              <input type="text" class="form-control" placeholder="tên trên thẻ" required>
+                            </div>
+                          </div>
+                          <div class="col-lg-3">
+                            <div class="mb-3">
+                              <label class="form-label">Ngày hết hạn</label>
+                              <input type="text" class="form-control" placeholder="MM/YY">
+                            </div>
+                          </div>
+                          <div class="col-lg-3">
+                            <div class="mb-3">
+                              <label class="form-label">Mã CVV</label>
+                              <input type="password" class="form-control">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- PayPal -->
+                  <div class="accordion-item mb-3 border">
+                    <h2 class="h5 px-4 py-3 accordion-header d-flex justify-content-between align-items-center">
+                      <div class="form-check w-100 collapsed" data-bs-toggle="collapse" data-bs-target="#collapsePP" aria-expanded="false">
+                        <input class="form-check-input" type="radio" name="payment" id="payment2">
+                        <label class="form-check-label pt-1" for="payment2">
+                          PayPal
+                        </label>
+                      </div>
+                      <span>
+                        <svg width="103" height="25" xmlns="http://www.w3.org/2000/svg">
+                          <g fill="none" fill-rule="evenodd">
+                            <path d="M8.962 5.857h7.018c3.768 0 5.187 1.907 4.967 4.71-.362 4.627-3.159 7.187-6.87 7.187h-1.872c-.51 0-.852.337-.99 1.25l-.795 5.308c-.052.344-.233.543-.505.57h-4.41c-.414 0-.561-.317-.452-1.003L7.74 6.862c.105-.68.478-1.005 1.221-1.005Z" fill="#009EE3"></path>
+                            <path d="M39.431 5.542c2.368 0 4.553 1.284 4.254 4.485-.363 3.805-2.4 5.91-5.616 5.919h-2.81c-.404 0-.6.33-.705 1.005l-.543 3.455c-.082.522-.35.779-.745.779h-2.614c-.416 0-.561-.267-.469-.863l2.158-13.846c.106-.68.362-.934.827-.934h6.263Zm-4.257 7.413h2.129c1.331-.051 2.215-.973 2.304-2.636.054-1.027-.64-1.763-1.743-1.757l-2.003.009-.687 4.384Zm15.618 7.17c.239-.217.482-.33.447-.062l-.085.642c-.043.335.089.512.4.512h2.323c.391 0 .581-.157.677-.762l1.432-8.982c.072-.451-.039-.672-.38-.672H53.05c-.23 0-.343.128-.402.48l-.095.552c-.049.288-.18.34-.304.05-.433-1.026-1.538-1.486-3.08-1.45-3.581.074-5.996 2.793-6.255 6.279-.2 2.696 1.732 4.813 4.279 4.813 1.848 0 2.674-.543 3.605-1.395l-.007-.005Zm-1.946-1.382c-1.542 0-2.616-1.23-2.393-2.738.223-1.507 1.665-2.737 3.206-2.737 1.542 0 2.616 1.23 2.394 2.737-.223 1.508-1.664 2.738-3.207 2.738Zm11.685-7.971h-2.355c-.486 0-.683.362-.53.808l2.925 8.561-2.868 4.075c-.241.34-.054.65.284.65h2.647a.81.81 0 0 0 .786-.386l8.993-12.898c.277-.397.147-.814-.308-.814H67.6c-.43 0-.602.17-.848.527l-3.75 5.435-1.676-5.447c-.098-.33-.342-.511-.793-.511h-.002Z" fill="#113984"></path>
+                            <path d="M79.768 5.542c2.368 0 4.553 1.284 4.254 4.485-.363 3.805-2.4 5.91-5.616 5.919h-2.808c-.404 0-.6.33-.705 1.005l-.543 3.455c-.082.522-.35.779-.745.779h-2.614c-.417 0-.562-.267-.47-.863l2.162-13.85c.107-.68.362-.934.828-.934h6.257v.004Zm-4.257 7.413h2.128c1.332-.051 2.216-.973 2.305-2.636.054-1.027-.64-1.763-1.743-1.757l-2.004.009-.686 4.384Zm15.618 7.17c.239-.217.482-.33.447-.062l-.085.642c-.044.335.089.512.4.512h2.323c.391 0 .581-.157.677-.762l1.431-8.982c.073-.451-.038-.672-.38-.672h-2.55c-.23 0-.343.128-.403.48l-.094.552c-.049.288-.181.34-.304.05-.433-1.026-1.538-1.486-3.08-1.45-3.582.074-5.997 2.793-6.256 6.279-.199 2.696 1.732 4.813 4.28 4.813 1.847 0 2.673-.543 3.604-1.395l-.01-.005Zm-1.944-1.382c-1.542 0-2.616-1.23-2.393-2.738.222-1.507 1.665-2.737 3.206-2.737 1.542 0 2.616 1.23 2.393 2.737-.223 1.508-1.665 2.738-3.206 2.738Zm10.712 2.489h-2.681a.317.317 0 0 1-.328-.362l2.355-14.92a.462.462 0 0 1 .445-.363h2.682a.317.317 0 0 1 .327.362l-2.355 14.92a.462.462 0 0 1-.445.367v-.004Z" fill="#009EE3"></path>
+                            <path d="M4.572 0h7.026c1.978 0 4.326.063 5.895 1.45 1.049.925 1.6 2.398 1.473 3.985-.432 5.364-3.64 8.37-7.944 8.37H7.558c-.59 0-.98.39-1.147 1.449l-.967 6.159c-.064.399-.236.634-.544.663H.565c-.48 0-.65-.362-.525-1.163L3.156 1.17C3.28.377 3.717 0 4.572 0Z" fill="#113984"></path>
+                            <path d="m6.513 14.629 1.226-7.767c.107-.68.48-1.007 1.223-1.007h7.018c1.161 0 2.102.181 2.837.516-.705 4.776-3.793 7.428-7.837 7.428H7.522c-.464.002-.805.234-1.01.83Z" fill="#172C70"></path>
+                          </g>
+                        </svg>
+                      </span>
+                    </h2>
+                    <div id="collapsePP" class="accordion-collapse collapse" data-bs-parent="#accordionPayment" style="">
+                      <div class="accordion-body">
+                        <div class="px-2 col-lg-6 mb-3">
+                          <label class="form-label">Email</label>
+                          <input type="email" required placeholder="Địa Chỉ Email" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Right -->
+              <div class="col-lg-3">
+                <div class="card position-sticky top-0">
+                  <div class="p-3 bg-light bg-opacity-10">
+                    <h6 class="card-title mb-3">Order Summary</h6>
+                    <div class="d-flex justify-content-between mb-1 small">
+                      <span>Subtotal</span> <span>$214.50</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-1 small">
+                      <span>Shipping</span> <span>$20.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-1 small">
+                      <span>Coupon (Code: NEWYEAR)</span> <span class="text-danger">-$10.00</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-4 small">
+                      <span>TOTAL</span> <strong class="text-dark">$224.50</strong>
+                    </div>
+                    <div class="form-check mb-1 small">
+                      <input class="form-check-input" type="checkbox" value="" id="tnc" required>
+                      <label class="form-check-label" for="tnc">
+                        Tôi đồng ý các điều khoản <a href="#">và các điều kiện</a>
+                      </label>
+                    </div>
+                    <div class="form-check mb-3 small">
+                      <input class="form-check-input" type="checkbox" value="" id="subscribe" required>
+                      <label class="form-check-label" for="subscribe">
+                        Nhận email về các sự kiện và cập nhật sản phẩm. Nếu bạn thay đổi quyết định của mình, bạn có thể hủy đăng ký bất kỳ lúc nào. <a href="#"> Chính sách bảo mật</a>
+                      </label>
+                    </div>
+                    <button class="btn btn-primary w-100 mt-2">Đặt Hàng</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="style"></div>
+        <div class="container text-center">
+            <div class="row row-cols-auto">
+                <div class="col grid-option">
+                    <div><i class='bx bxs-rocket'></i></div>
+                    <div>
+                        <p>Free Shipping</p>
+                        Orders $50 or more
+                    </div>
+                </div>
+                <div class="col grid-option">
+                    <div><i class='bx bx-rotate-left'></i></div>
+                    <div>
+                        <p>Free Returns</p>
+                        Within 30 days
+                    </div>
+                </div>
+                <div class="col grid-option">
+                    <div><i class='bx bx-info-circle'></i></div>
+                    <div>
+                        <p>Get 20% Off 1 Items</p>
+                        When you sign up
+                    </div>
+                </div>
+                <div class="col grid-option">
+                    <div><i class='bx bx-support'></i></div>
+                    <div>
+                        <p>We Support</p>
+                        24/7 amazing services
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer1">
+
+            <form action="">
+                <h2>Get The Latest Deals</h2>
+                <p>and receive $20 coupon for first shopping</p>
+                <input type="email" placeholder=" Enter you email address" required>
+                <button type="submit">Subscribe <i class='bx bx-right-arrow-alt'></i> </button>
+            </form>
+        </div>
+        <!-- Footer -->
+        <footer class="text-center text-lg-start bg-white text-muted">
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+                    <span>Get connected with us on social networks:</span>
+                </div>
+                <!-- Left -->
+
+                <!-- Right -->
+                <div>
+                    <a href="" class="me-4 link-secondary">
+                        <i class='bx bxl-facebook-circle' ></i>
+                    </a>
+                    <a href="" class="me-4 link-secondary">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                    <a href="" class="me-4 link-secondary">
+                        <i class='bx bxl-google' ></i>
+                    </a>
+                    <a href="" class="me-4 link-secondary">
+                        <i class='bx bxl-instagram-alt' ></i>
+                    </a>
+                    <a href="" class="me-4 link-secondary">
+                        <i class='bx bxl-linkedin' ></i>
+                    </a>
+                    <a href="" class="me-4 link-secondary">
+                        <i class='bx bxl-github' ></i>
+                    </a>
+                </div>
+                <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                <i class='bx bxs-diamond' ></i> HC TECHNOLOGY
+                            </h6>
+                            <p>
+                                Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                DANH MỤC
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">ĐIỆN THOẠI</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">MÁY TÍNH</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">ĐỒNG HỒ</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">PHỤ KIỆN</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 support col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                HỖ TRỢ
+                            </h6>
+                            <p>
+                                HÀ NỘI:0123.456.789
+                            </p>
+                            <p>
+                                SÀI GÒN: 0987.86.86.86
+                            </p>
+                            <p>
+                               THÁI  BÌNH: 09999.456789
+                            </p>
+                            <p>
+                                NAM ĐỊNH: 01234.99999
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">LIÊN HỆ</h6>
+                            <p><i class='bx bxs-home-alt-2' ></i> TẦNG 72 LANDMARK - NGUYỄN CHÍ THANH- HÀ NỘI</p>
+                            <p>
+                                <i class='bx bxl-gmail' ></i>
+                                hctechnology@it.com
+                            </p>
+                            <p><i class='bx bx-phone' ></i> 01234.99999</p>
+                            <p><i class='bx bx-phone' ></i>09999.456789</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+                © 2022 Copyright:
+                <a class="text-reset fw-bold" href="https://mdbootstrap.com/">hctechnology@it.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="src/js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+        <script>
+            AOS.init();
+        </script>
+</body>
+
+</html>

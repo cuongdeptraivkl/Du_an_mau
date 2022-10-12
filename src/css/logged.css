@@ -1,0 +1,286 @@
+.UserNew{
+    position: relative;
+    cursor: pointer;
+}
+.UserNew::before{
+    content: "";
+    height: 20px ;
+    width: 50px;
+    left: 10px;
+    position: absolute;
+    top: 20px;
+}
+.UserNew:hover .account{
+    display: block;
+}
+.account{
+    padding: 20px 20px 0 20px;
+    display: none;
+    border-radius: 20px;
+    background-color: rgba(199, 196, 196, 0.8);
+    clip-path: polygon(20% 0%, 22% 8%, 100% 8%, 100% 80%, 100% 100%, 0 100%, 0 8%, 17% 8%);
+    position: absolute;
+    top: 20px;
+}
+.account p{
+    line-height: 10px;
+    width: max-content;
+}
+.account p a{
+    color: black;
+} 
+.heart:hover .hover_heart{
+    display: block;
+}
+.hover_heart{
+    padding: 45px 10px 10px 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border: 1.5px solid rgba(128, 128, 128, 0.644);
+    position: absolute;
+    z-index: 10;
+    top: 25px;
+    left: -235px;
+    display: none;
+    clip-path: polygon(76% 7%, 80% 0%, 83% 7%, 100% 7%, 100% 100%, 0 100%, 0% 80%, 0 6%);
+}
+.item_heart{
+    display: grid;
+    grid-template-columns: 1.5fr .9fr;
+    width:max-content;
+    align-items: center;
+}
+.text_item_heart{
+    width: auto;
+    color: rgb(143, 143, 143);
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+.text_item_heart p:nth-child(2){
+    font-style: normal;
+    font-weight: normal;
+    color: orangered;
+    margin-top: -10px;
+}
+.item-heart{
+    margin-top: -10px;
+}
+.viewall{ 
+    background-color: #499ff5d8;
+    width: max-content;
+    margin: auto;
+    padding: 10px 30px;
+    margin-top: -30px;
+    border-radius: 10px;
+    transition: .3s linear;
+}
+.viewall a{
+    color: #fff;
+}
+.viewall:hover a{
+    text-decoration: none;
+    color: #fff;
+}
+.viewall:hover{
+    background-color: #2b90f5;
+}
+/* -----cart----- */
+.cartnew:hover .hover_heart {
+display: block;
+}
+.total{
+    display: flex;
+    justify-content: space-around;
+}
+.view_cart{
+    margin-top: 10px;
+}
+/* ----------top product----------- */
+
+.btn_pro{
+    display: flex;
+}
+.gallery-title{
+    margin-top: 10px;
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+button:focus{
+    box-shadow: none !important;
+}
+.filter-button
+{
+    font-size: 18px;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    transition: .3s linear;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #3399ff;
+    transition: .3s linear;
+}
+.btn-default:active .filter-button:active{
+    background-color: #3399ff;
+    color: white;
+}
+ 
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 30px;
+}
+/* -------------chi tiết ------------ */
+.wrapper{
+
+    margin-top: 30px;
+}
+
+.card{
+
+    border:1px solid #eee;
+    cursor: pointer;
+}
+
+
+.weight{
+
+    margin-top: -65px; 
+    transition: all 0.5s;  
+}
+
+.weight small{
+
+    color: #e2dede;
+}
+
+.buttons {
+        padding: 10px;
+    background-color: #d6d4d44f;
+    border-radius: 4px;
+    position: relative;
+    margin-top: 7px;
+    opacity: 0;
+    transition: all 0.8s;
+}
+.buttons button {
+      background-color: #3399ff !important;  
+}
+.buttons button:hover{
+    background-color: #0a4681 !important;
+}
+.dot {
+    height: 14px;
+    width: 14px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    left: 27%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+    color: #fff;
+    opacity: 0;
+}
+
+.cart-button {
+    height: 48px
+}
+
+.cart-button:focus {
+    box-shadow: none
+}
+
+.cart {
+    position: relative;
+    height: 48px !important;
+    width: 50px;
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 11px;
+    border-radius: 5px;
+    font-size: 14px;
+    overflow: hidden;
+    transition: .3s linear;
+
+}
+
+.cart-button.clicked span.dot {
+    animation: item 0.3s ease-in forwards
+}
+
+@keyframes item {
+    0% {
+        opacity: 1;
+        top: 30%;
+        left: 30%
+    }
+
+    25% {
+        opacity: 1;
+        left: 26%;
+        top: 0%
+    }
+
+    50% {
+        opacity: 1;
+        left: 23%;
+        top: -22%
+    }
+
+    75% {
+        opacity: 1;
+        left: 19%;
+        top: -18%
+    }
+
+    100% {
+        opacity: 1;
+        left: 14%;
+        top: 28%
+    }
+}
+
+
+
+.card:hover .buttons{
+
+    opacity: 1;
+}
+
+
+.card:hover .weight{
+
+     margin-top: 10px;
+}
+
+.card:hover{
+
+    transform: scale(1.1);
+    z-index: 2;
+    overflow: hidden;
+    transition: .3s linear;
+}
+.gallery_product{
+    overflow: hidden;
+}
