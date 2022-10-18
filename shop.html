@@ -9,8 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="src/css/logged.css">
-    <link rel="stylesheet" href="src/css/shop.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -18,6 +16,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
 
 </head>
 
@@ -62,16 +61,21 @@
                                         <li><a class="dropdown-item" href="#">VietNamese</a></li>
                                     </ul>
                                 </li>
+                                <!-- <li class="nav-item dropdown">
+                                    <a class="color-a" href="login.html">
+                                        Sing In / Sing Up
+                                    </a>
 
+                                </li> -->
 
                                 <li class="nav-item dropdown UserNew">
-                                    <p class="color-a" href="">
-                                        <i class='bx bxs-user'></i> User
-                                    </p>
+                                
+                                        <img src="src/img/cuong.jpg" alt="">
+                                    
                                     <div class="account">
-                                        <p> <i class='bx bx-loader-alt'></i> <a href="">Đổi pass</a></p>
-                                        <p> <i class='bx bxs-cloud-upload'></i> <a href="">Update</a></p>
-                                        <p><i class='bx bx-log-out-circle bx-rotate-90'></i> <a href="">Logout</a></p>
+                                        <p> <i class='bx bx-loader-alt'></i> <a href="update.html">Đổi pass</a></p>
+                                        <p> <i class='bx bxs-cloud-upload'></i> <a href="update.html">Update</a></p>
+                                        <p><i class='bx bx-log-out-circle bx-rotate-90' ></i> <a href="">Logout</a></p>
                                     </div>
                                 </li>
                             </ul>
@@ -90,7 +94,7 @@
             <div class="header_mid">
                 <div class="logo_header">
 
-                    <img src="src/img/logoHC.png" width="100px" alt="">
+                  <a href="logged.html">  <img src="src/img/logoHC.png" width="100px" alt=""></a>
 
                 </div>
                 <div class="icon_header_mid">
@@ -134,7 +138,7 @@
                         </div>
                     </div>
                     <div class="cartnew center">
-                        <a href="cart.html"> <i class='bx bx-cart'></i></a>
+                       <a href="cart.html"> <i class='bx bx-cart'></i></a>
                         <p>Cart</p>
                         <div class="hover_heart">
                             <div class="item_heart">
@@ -181,7 +185,7 @@
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
 
-                        <a class="navbar-brand" href="">TẤT CẢ</a>
+                        <a class="navbar-brand" href="shop.html">TẤT CẢ</a>
                         <button class="navbar-toggler btn" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -279,354 +283,567 @@
             </div>
         </div>
         <div class="container">
-            <div class="bg-white rounded d-flex align-items-center justify-content-between" id="header"> 
-                <button
-                    class="btn btn-hide text-uppercase" type="button" data-toggle="collapse" data-target="#filterbar"
-                    aria-expanded="false" aria-controls="filterbar" id="filter-btn" onclick="changeBtnTxt()"> <span
-                        class="fas fa-angle-left" id="filter-angle"></span> <span id="btn-txt">Hide filters</span>
+            <div class="bg-white rounded d-flex align-items-center justify-content-between" id="header">
+                <button class="btn btn-hide text-uppercase" type="button" data-toggle="collapse"
+                    data-target="#filterbar" aria-expanded="false" aria-controls="filterbar" id="filter-btn"
+                    onclick="changeBtnTxt()"> <span class="fas fa-angle-left" id="filter-angle"></span> <span
+                        id="btn-txt">Lọc</span>
                 </button>
-                <!-- <nav class="navbar navbar-expand-lg navbar-light pl-lg-0 pl-auto">
-                     <button class="navbar-toggler"
-                        type="button" data-toggle="collapse" data-target="#mynav" aria-controls="mynav"
-                        aria-expanded="false" aria-label="Toggle navigation" onclick="chnageIcon()" id="icon">
-                         <span class="navbar-toggler-icon"></span> </button>
-                    <div class="collapse navbar-collapse" id="mynav">
-                        <ul class="navbar-nav d-lg-flex align-items-lg-center">
-                            <li class="nav-item active"> <select name="sort" id="sort">
-                                    <option value="" hidden selected>Sort by</option>
-                                    <option value="price">Price</option>
-                                    <option value="popularity">Popularity</option>
-                                    <option value="rating">Rating</option>
-                                </select> </li>
-                            <li class="nav-item d-inline-flex align-items-center justify-content-between mb-lg-0 mb-3">
-                                <div class="d-inline-flex align-items-center mx-lg-2" id="select2">
-                                    <div class="pl-2">Products:</div> <select name="pro" id="pro">
-                                        <option value="18">18</option>
-                                        <option value="19">19</option>
-                                        <option value="20">20</option>
-                                    </select>
-                                </div>
-                                <div class="font-weight-bold mx-2 result">18 from 200</div>
-                            </li>
-                            <li class="nav-item d-lg-none d-inline-flex"> </li>
-                        </ul>
-                    </div>
-                </nav> -->
+
                 <div class="ml-auto mt-3 mr-2">
                     <nav aria-label="Page navigation example">
-                       <span><i class='bx bx-chevron-left'></i></span>
+                        <span><i class='bx bx-chevron-left'></i></span>2<i class='bx bx-chevron-right'></i> / ...
+                        <span><i class='bx bx-chevron-left'></i></span>10<i class='bx bx-chevron-right'></i>
                     </nav>
                 </div>
             </div>
             <div id="content" class="my-5">
-                <div id="filterbar" class="collapse">
+                <!-- ===========lọc=========== -->
+                <div id="filterbar" class="collapse" data-aos="fade-right">
+                     <!-- ========Option======== -->
                     <div class="box border-bottom">
                         <div class="form-group text-center">
-                            <div class="btn-group" data-toggle="buttons"> <label
-                                    class="btn btn-success form-check-label"> <input class="form-check-input"
-                                        type="radio"> Reset </label> <label
-                                    class="btn btn-success form-check-label active"> <input class="form-check-input"
-                                        type="radio" checked> Apply </label> </div>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-success form-check-label"> <input class="form-check-input"
+                                        type="radio">Khôi Phục </label>
+                                <label class="btn btn-success form-check-label active"> <input class="form-check-input"
+                                        type="radio" checked> Áp Dụng </label>
+                            </div>
                         </div>
-                        <div> <label class="tick">New <input type="checkbox" checked="checked"> <span
-                                    class="check"></span> </label> </div>
-                        <div> <label class="tick">Sale <input type="checkbox"> <span class="check"></span> </label>
-                        </div>
+
                     </div>
+                   <!-- ========loại sản phẩm========= -->
                     <div class="box border-bottom">
-                        <div class="box-label text-uppercase d-flex align-items-center">Outerwear <button
-                                class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box"
+                        <div class="box-label text-uppercase d-flex align-items-center">
+                            Sản Phẩm
+                            <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box"
                                 aria-expanded="false" aria-controls="inner-box" id="out" onclick="outerFilter()"> <span
-                                    class="fas fa-plus"></span> </button> </div>
-                        <div id="inner-box" class="collapse mt-2 mr-1">
-                            <div class="my-1"> <label class="tick">Windbreaker <input type="checkbox" checked="checked">
-                                    <span class="check"></span> </label> </div>
-                            <div class="my-1"> <label class="tick">Jumpsuit <input type="checkbox"> <span
-                                        class="check"></span> </label> </div>
-                            <div class="my-1"> <label class="tick">Jacket <input type="checkbox"> <span
-                                        class="check"></span> </label> </div>
-                            <div class="my-1"> <label class="tick">Coat <input type="checkbox"> <span
-                                        class="check"></span> </label> </div>
-                            <div class="my-1"> <label class="tick">Raincoat <input type="checkbox"> <span
-                                        class="check"></span> </label> </div>
-                            <div class="my-1"> <label class="tick">Handbag <input type="checkbox" checked> <span
-                                        class="check"></span> </label> </div>
-                            <div class="my-1"> <label class="tick">Warm vest <input type="checkbox"> <span
-                                        class="check"></span> </label> </div>
-                            <div class="my-1"> <label class="tick">Wallets <input type="checkbox" checked> <span
-                                        class="check"></span> </label> </div>
+                                    class="fas fa-plus"></span> </button>
                         </div>
+                       
+                        <div id="inner-box" class="collapse mt-2 mr-1">
+                            <p class="filter-button" data-filter="all">Tất cả</p>
+                            <p class="filter-button" data-filter="maytinh">Máy tính</p>
+                            <p class="filter-button" data-filter="dienthoai">Điện thoại</p>
+                            <p class="filter-button" data-filter="table">Table</p>
+                            <p class="filter-button" data-filter="dongho"> Đồng hồ</p>
+                        </div>
+                         
                     </div>
+                     <!-- ========cơ sở================= -->
                     <div class="box border-bottom">
-                        <div class="box-label text-uppercase d-flex align-items-center">season <button
+                        <div class="box-label text-uppercase d-flex align-items-center">Cơ Sở <button
                                 class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box2"
                                 aria-expanded="false" aria-controls="inner-box2"><span
                                     class="fas fa-plus"></span></button> </div>
                         <div id="inner-box2" class="collapse mt-2 mr-1">
-                            <div class="my-1"> <label class="tick">Spring <input type="checkbox" checked="checked">
+                            <div class="my-1"> <label class="tick">Hà Nội <input type="checkbox" checked="checked">
                                     <span class="check"></span> </label> </div>
-                            <div class="my-1"> <label class="tick">Summer <input type="checkbox"> <span
+                            <div class="my-1"> <label class="tick">Thái Bình <input type="checkbox"> <span
                                         class="check"></span> </label> </div>
-                            <div class="my-1"> <label class="tick">Autumn <input type="checkbox" checked> <span
+                            <div class="my-1"> <label class="tick">Nam ĐỊnh <input type="checkbox" checked> <span
                                         class="check"></span> </label> </div>
-                            <div class="my-1"> <label class="tick">Winter <input type="checkbox"> <span
+                            <div class="my-1"> <label class="tick">Bắc Giang <input type="checkbox"> <span
                                         class="check"></span> </label> </div>
-                            <div class="my-1"> <label class="tick">Rainy <input type="checkbox"> <span
+                            <div class="my-1"> <label class="tick">Sapa <input type="checkbox"> <span
                                         class="check"></span> </label> </div>
                         </div>
                     </div>
-                    <div class="box border-bottom">
-                        <div class="box-label text-uppercase d-flex align-items-center">price <button
-                                class="btn ml-auto" type="button" data-toggle="collapse" data-target="#price"
-                                aria-expanded="false" aria-controls="price"><span class="fas fa-plus"></span></button>
-                        </div>
-                        <div class="collapse" id="price">
-                            <div class="middle">
-                                <div class="multi-range-slider"> <input type="range" id="input-left" min="0" max="100"
-                                        value="10"> <input type="range" id="input-right" min="0" max="100" value="50">
-                                    <div class="slider">
-                                        <div class="track"></div>
-                                        <div class="range"></div>
-                                        <div class="thumb left"></div>
-                                        <div class="thumb right"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-between mt-2">
-                                <div> <span id="amount-left" class="font-weight-bold"></span> uah </div>
-                                <div> <span id="amount-right" class="font-weight-bold"></span> uah </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box-label text-uppercase d-flex align-items-center">size <button class="btn ml-auto"
-                                type="button" data-toggle="collapse" data-target="#size" aria-expanded="false"
-                                aria-controls="size"><span class="fas fa-plus"></span></button> </div>
-                        <div id="size" class="collapse">
-                            <div class="btn-group d-flex align-items-center flex-wrap" data-toggle="buttons"> <label
-                                    class="btn btn-success form-check-label"> <input class="form-check-input"
-                                        type="checkbox"> 80 </label> <label class="btn btn-success form-check-label">
-                                    <input class="form-check-input" type="checkbox" checked> 92 </label> <label
-                                    class="btn btn-success form-check-label"> <input class="form-check-input"
-                                        type="checkbox" checked> 102 </label> <label
-                                    class="btn btn-success form-check-label"> <input class="form-check-input"
-                                        type="checkbox" checked> 104 </label> <label
-                                    class="btn btn-success form-check-label"> <input class="form-check-input"
-                                        type="checkbox" checked> 106 </label> <label
-                                    class="btn btn-success form-check-label"> <input class="form-check-input"
-                                        type="checkbox" checked> 108 </label> </div>
-                        </div>
-                    </div>
+                   
                 </div>
-                <div id="products">
-                    <div class="row mx-0">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="card d-flex flex-column align-items-center">
-                                <div class="product-name">Torn Jeans for Men</div>
-                                <div class="card-img"> <img
-                                        src="https://www.freepnglogos.com/uploads/jeans-png/jeans-mens-pants-cliparts-download-clip-art-37.png"
-                                        alt=""> </div>
-                                <div class="card-body pt-5">
-                                    <div class="text-muted text-center mt-auto">Available Colors</div>
-                                    <div class="d-flex align-items-center justify-content-center colors my-2">
-                                        <div class="btn-group" data-toggle="buttons" data-tooltip="tooltip"
-                                            data-placement="right" title="choose color"> <label
-                                                class="btn btn-red form-check-label"> <input class="form-check-input"
-                                                    type="radio" autocomplete="off"> </label> <label
-                                                class="btn btn-blue form-check-label active"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                            <label class="btn btn-green form-check-label"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                            <label class="btn btn-orange form-check-label"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                            <label class="btn btn-pink form-check-label"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center price">
-                                        <div class="del mr-2"><span class="text-dark">5500 uah</span></div>
-                                        <div class="font-weight-bold">4500 uah</div>
-                                    </div>
+
+                <!-- ============tất cả sản phẩm=============== -->
+                <div class="wrapper">
+
+
+                    <div class="containershop">
+
+                        <div class="row allproduct g-1">
+                            <div class="top_product_titel">
+                                <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <h3 class="gallery-title"> SẢN PHẨM</h2>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 pt-md-0 pt-3">
-                            <div class="card d-flex flex-column align-items-center">
-                                <div class="product-name">Nike Tshirts for Men</div>
-                                <div class="card-img"> <img
-                                        src="https://www.freepnglogos.com/uploads/t-shirt-png/t-shirt-png-printed-shirts-south-africa-20.png"
-                                        alt="" height="100" id="shirt"> </div>
-                                <div class="text-muted text-center mt-auto">Available Sizes</div>
-                                <div id="avail-size">
-                                    <div class="btn-group d-flex align-items-center flex-wrap" data-toggle="buttons">
-                                        <label class="btn btn-success form-check-label"> <input class="form-check-input"
-                                                type="checkbox"> 80 </label> <label
-                                            class="btn btn-success form-check-label"> <input class="form-check-input"
-                                                type="checkbox" checked> 92 </label> <label
-                                            class="btn btn-success form-check-label"> <input class="form-check-input"
-                                                type="checkbox" checked> 102 </label> <label
-                                            class="btn btn-success form-check-label"> <input class="form-check-input"
-                                                type="checkbox" checked> 104 </label> <label
-                                            class="btn btn-success form-check-label"> <input class="form-check-input"
-                                                type="checkbox" checked> 106 </label> <label
-                                            class="btn btn-success form-check-label"> <input class="form-check-input"
-                                                type="checkbox" checked> 108 </label>
+
+                           
+                            <div class="col-md-3 gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter dienthoai" data-aos="fade-right">
+
+                                <div class="card p-3">
+
+                                    <div class="text-center">
+
+                                       <a href="product.html"> <img width="100%" src="src/img/telephone4.png" alt=""></a>
+
                                     </div>
-                                </div>
-                                <div class="card-body pt-0">
-                                    <div class="text-muted text-center mt-auto">Available Colors</div>
-                                    <div class="d-flex align-items-center justify-content-center colors my-2">
-                                        <div class="btn-group" data-toggle="buttons" data-tooltip="tooltip"
-                                            data-placement="right" title="choose color"> <label
-                                                class="btn btn-light border form-check-label"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                            <label class="btn btn-blue form-check-label active"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                            <label class="btn btn-green form-check-label"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                            <label class="btn btn-orange form-check-label"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                            <label class="btn btn-pink form-check-label"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
+
+                                    <div class="product-details">
+
+
+                                        <span class="font-weight-bold d-block">$ 130.00</span>
+                                        <span>Điện thoại 1</span>
+
+
+                                        <div class="buttons d-flex flex-row">
+                                            <div class="cart"><i class='bx bx-cart-add'></i></div>
+                                            <button class="btn btn-success cart-button btn-block"><span
+                                                    class="dot">1</span>Add to cart </button>
                                         </div>
+
+                                        <div class="weight">
+
+                                            <small>$130.00</small>
+
+                                        </div>
+
                                     </div>
-                                    <div class="d-flex align-items-center price">
-                                        <div class="del mr-2"><span class="text-dark">5500 uah</span></div>
-                                        <div class="font-weight-bold">4500 uah</div>
-                                    </div>
+
+
+
                                 </div>
+
+
+                            </div>
+                            
+                            <div class="col-md-3 gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter dienthoai" data-aos="fade-down">
+
+                                <div class="card p-3">
+
+                                    <div class="text-center">
+
+                                      <a href="product.html">  <img width="100%" src="src/img/telephone5.jpg" alt=""></a>
+
+                                    </div>
+
+                                    <div class="product-details">
+
+
+                                        <span class="font-weight-bold d-block">$ 130.00</span>
+                                        <span>Điện Thoại 2</span>
+
+
+                                        <div class="buttons d-flex flex-row">
+                                            <div class="cart"><i class='bx bx-cart-add'></i></div>
+                                            <button class="btn btn-success cart-button btn-block"><span
+                                                    class="dot">1</span>Add to cart </button>
+                                        </div>
+
+                                        <div class="weight">
+
+                                            <small>$130.00</small>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-3 gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter dienthoai" data-aos="fade-left">
+
+                                <div class="card p-3">
+
+                                    <div class="text-center">
+
+                                      <a href="product.html">  <img width="100%" src="src/img/telephone6.jpg" alt=""></a>
+
+                                    </div>
+
+                                    <div class="product-details">
+
+
+                                        <span class="font-weight-bold d-block">$ 130.00</span>
+                                        <span>Điện Thoại 3</span>
+
+
+                                        <div class="buttons d-flex flex-row">
+                                            <div class="cart"><i class='bx bx-cart-add'></i></div>
+                                            <button class="btn btn-success cart-button btn-block"><span
+                                                    class="dot">1</span>Add to cart </button>
+                                        </div>
+
+                                        <div class="weight">
+
+                                            <small>$130.00</small>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-3 gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter maytinh" data-aos="fade-right">
+
+                                <div class="card p-3">
+
+                                    <div class="text-center">
+
+                                       <a href="product.html"> <img width="100%" src="src/img/laptop2.jpg" alt=""></a>
+
+                                    </div>
+
+                                    <div class="product-details">
+
+
+                                        <span class="font-weight-bold d-block">$ 130.00</span>
+                                        <span>Laptop gaming 3</span>
+
+
+                                        <div class="buttons d-flex flex-row">
+                                            <div class="cart"><i class='bx bx-cart-add'></i></div>
+                                            <button class="btn btn-success cart-button btn-block"><span
+                                                    class="dot">1</span>Add to cart </button>
+                                        </div>
+
+                                        <div class="weight">
+
+                                            <small>$130.00</small>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-3 gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter maytinh" data-aos="fade-down">
+
+                                <div class="card p-3">
+
+                                    <div class="text-center">
+
+                                      <a href="product.html">  <img width="100%" src="src/img/laptop2.jpg" alt=""></a>
+
+                                    </div>
+
+                                    <div class="product-details">
+
+
+                                        <span class="font-weight-bold d-block">$ 130.00</span>
+                                        <span>Laptop gaming 2</span>
+
+
+                                        <div class="buttons d-flex flex-row">
+                                            <div class="cart"><i class='bx bx-cart-add'></i></div>
+                                            <button class="btn btn-success cart-button btn-block"><span
+                                                    class="dot">1</span>Add to cart </button>
+                                        </div>
+
+                                        <div class="weight">
+
+                                            <small>$130.00</small>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-3 gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter maytinh" data-aos="fade-left">
+
+                                <div class="card p-3">
+
+                                    <div class="text-center">
+
+                                        <a href="product.html"><img src="src/img/laptop1.jpg" width="100%" alt=""></a>
+
+                                    </div>
+
+                                    <div class="product-details">
+
+
+                                        <span class="font-weight-bold d-block">$ 130.00</span>
+                                        <span>Laptop Gaming 1</span>
+
+
+                                        <div class="buttons d-flex flex-row">
+                                            <div class="cart"><i class='bx bx-cart-add'></i></div>
+                                            <button class="btn btn-success cart-button btn-block"><span
+                                                    class="dot">1</span>Add to cart </button>
+                                        </div>
+
+                                        <div class="weight">
+
+                                            <small>$130.00</small>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-3 gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter dongho" data-aos="fade-right">
+
+                                <div class="card p-3">
+
+                                    <div class="text-center">
+
+                                      <a href="product.html">  <img width="100%" src="src/img/watch4.jpg" alt=""></a>
+
+                                    </div>
+
+                                    <div class="product-details">
+
+
+                                        <span class="font-weight-bold d-block">$ 130.00</span>
+                                        <span>Đồng hồ 1</span>
+
+
+                                        <div class="buttons d-flex flex-row">
+                                            <div class="cart"><i class='bx bx-cart-add'></i></div>
+                                            <button class="btn btn-success cart-button btn-block"><span
+                                                    class="dot">1</span>Add to cart </button>
+                                        </div>
+
+                                        <div class="weight">
+
+                                            <small>$130.00</small>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-3 gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter dongho" data-aos="fade-down">
+
+                                <div class="card p-3">
+
+                                    <div class="text-center">
+
+                                      <a href="product.html">  <img width="100%" src="src/img/watch5.jpg" alt="">
+                                      </a>
+                                    </div>
+
+                                    <div class="product-details">
+
+
+                                        <span class="font-weight-bold d-block">$ 130.00</span>
+                                        <span>Đồng Hồ 2</span>
+
+
+                                        <div class="buttons d-flex flex-row">
+                                            <div class="cart"><i class='bx bx-cart-add'></i></div>
+                                            <button class="btn btn-success cart-button btn-block"><span
+                                                    class="dot">1</span>Add to cart </button>
+                                        </div>
+
+                                        <div class="weight">
+
+                                            <small>$130.00</small>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                            <div class="col-md-3 gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter dongho" data-aos="fade-left">
+
+                                <div class="card p-3">
+
+                                    <div class="text-center">
+
+                                      <a href="product.html">  <img width="100%" src="src/img/watch6.jpg" alt=""></a>
+
+                                    </div>
+
+                                    <div class="product-details">
+
+
+                                        <span class="font-weight-bold d-block">$ 130.00</span>
+                                        <span>Đồng hồ watch 3</span>
+
+
+                                        <div class="buttons d-flex flex-row">
+                                            <div class="cart"><i class='bx bx-cart-add'></i></div>
+                                            <button class="btn btn-success cart-button btn-block"><span
+                                                    class="dot">1</span>Add to cart </button>
+                                        </div>
+
+                                        <div class="weight">
+
+                                            <small>$130.00</small>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                            <div class="col-md-3 gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter table" data-aos="fade-right">
+
+                                <div class="card p-3">
+
+                                    <div class="text-center">
+
+                                      <a href="product.html">  <img width="100%" src="src/img/table1.png" alt=""></a>
+
+                                    </div>
+
+                                    <div class="product-details">
+
+
+                                        <span class="font-weight-bold d-block">$ 130.00</span>
+                                        <span>Máy tính bảng 1</span>
+
+
+                                        <div class="buttons d-flex flex-row">
+                                            <div class="cart"><i class='bx bx-cart-add'></i></div>
+                                            <button class="btn btn-success cart-button btn-block"><span
+                                                    class="dot">1</span>Add to cart </button>
+                                        </div>
+
+                                        <div class="weight">
+
+                                            <small>$130.00</small>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-3 gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter table" data-aos="fade-down">
+
+                                <div class="card p-3">
+
+                                    <div class="text-center">
+
+                                      <a href="product.html">  <img width="100%" src="src/img/table2.jpg" alt=""></a>
+
+                                    </div>
+
+                                    <div class="product-details">
+
+
+                                        <span class="font-weight-bold d-block">$ 130.00</span>
+                                        <span>Máy tỈnh bảng 2</span>
+
+
+                                        <div class="buttons d-flex flex-row">
+                                            <div class="cart"><i class='bx bx-cart-add'></i></div>
+                                            <button class="btn btn-success cart-button btn-block"><span
+                                                    class="dot">1</span>Add to cart </button>
+                                        </div>
+
+                                        <div class="weight">
+
+                                            <small>$130.00</small>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-3 gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter table" data-aos="fade-up" >
+
+                                <div class="card p-3">
+
+                                    <div class="text-center">
+
+                                       <a href="product.html"> <img width="100%" src="src/img/table3.jpg" alt=""></a>
+
+                                    </div>
+
+                                    <div class="product-details">
+
+
+                                        <span class="font-weight-bold d-block">$ 130.00</span>
+                                        <span>Máy tính bảng 3</span>
+
+
+                                        <div class="buttons d-flex flex-row">
+                                            <div class="cart"><i class='bx bx-cart-add'></i></div>
+                                            <button class="btn btn-success cart-button btn-block"><span
+                                                    class="dot">1</span>Add to cart </button>
+                                        </div>
+
+                                        <div class="weight">
+
+                                            <small>$130.00</small>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3">
-                            <div class="card d-flex flex-column align-items-center">
-                                <div class="product-name text-center">Casual Dress Belts For Men</div>
-                                <div class="card-img"> <img
-                                        src="https://www.freepnglogos.com/uploads/belts-png/casual-dress-belts-for-men-28.png"
-                                        alt=""> </div>
-                                <div class="card-body pt-5">
-                                    <div class="text-muted text-center mt-auto">Available Colors</div>
-                                    <div class="d-flex align-items-center justify-content-center colors my-2">
-                                        <div class="btn-group" data-toggle="buttons" data-tooltip="tooltip"
-                                            data-placement="right" title="choose color"> <label
-                                                class="btn btn-dark border form-check-label"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                            <label class="btn btn-brown form-check-label active"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-center price">
-                                        <div class="font-weight-bold">500 uah</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 pt-md-4 pt-3">
-                            <div class="card d-flex flex-column align-items-center">
-                                <div class="product-name text-center">Footwear For Women</div>
-                                <div class="card-img"> <img
-                                        src="https://www.freepnglogos.com/uploads/women-shoes-png/download-women-shoes-png-image-png-image-pngimg-2.png"
-                                        alt=""> </div>
-                                <div class="card-body pt-5">
-                                    <div class="text-muted text-center mt-auto">Available Colors</div>
-                                    <div class="d-flex align-items-center justify-content-center colors my-2">
-                                        <div class="btn-group" data-toggle="buttons" data-tooltip="tooltip"
-                                            data-placement="right" title="choose color"> <label
-                                                class="btn btn-dark border form-check-label"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                            <label class="btn btn-brown form-check-label active"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                            <label class="btn btn-pink form-check-label"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                            <label class="btn btn-red form-check-label"> <input class="form-check-input"
-                                                    type="radio" autocomplete="off"> </label>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-center price">
-                                        <div class="font-weight-bold">1500 uah</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 pt-md-4 pt-3">
-                            <div class="card d-flex flex-column align-items-center">
-                                <div class="product-name text-center">Nike Jogging shoes For Men</div>
-                                <div class="card-img"> <img
-                                        src="https://www.freepnglogos.com/uploads/shoes-png/find-your-perfect-running-shoes-26.png"
-                                        alt=""> </div>
-                                <div class="card-body pt-5">
-                                    <div class="text-muted text-center mt-auto">Available Colors</div>
-                                    <div class="d-flex align-items-center justify-content-center colors my-2">
-                                        <div class="btn-group" data-toggle="buttons" data-tooltip="tooltip"
-                                            data-placement="right" title="choose color"> <label
-                                                class="btn btn-dark border form-check-label"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                            <label class="btn btn-pink form-check-label active"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                            <label class="btn btn-blue form-check-label"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                            <label class="btn btn-orange form-check-label"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-center price">
-                                        <div class="font-weight-bold">1200 uah</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 pt-md-4 pt-3">
-                            <div class="card d-flex flex-column align-items-center">
-                                <div class="product-name text-center">Leather Wallets For Men</div>
-                                <div class="card-img"> <img
-                                        src="https://www.freepnglogos.com/uploads/money-png/money-wallet-dollar-image-money-pictures-download-27.png"
-                                        alt=""> </div>
-                                <div class="card-body pt-5">
-                                    <div class="text-muted text-center mt-auto">Available Colors</div>
-                                    <div class="d-flex align-items-center justify-content-center colors my-2">
-                                        <div class="btn-group" data-toggle="buttons" data-tooltip="tooltip"
-                                            data-placement="right" title="choose color"> <label
-                                                class="btn btn-dark border form-check-label"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                            <label class="btn btn-brown form-check-label active"> <input
-                                                    class="form-check-input" type="radio" autocomplete="off"> </label>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-center price">
-                                        <div class="font-weight-bold">900 uah</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
+
+
                 </div>
             </div>
         </div>
 
         <div class="style"></div>
+        <!-- =========option============ -->
         <div class="container text-center">
             <div class="row row-cols-auto">
-                <div class="col grid-option">
+                <div class="col grid-option" data-aos="fade-down">
                     <div><i class='bx bxs-rocket'></i></div>
                     <div>
                         <p>Free Shipping</p>
                         Orders $50 or more
                     </div>
                 </div>
-                <div class="col grid-option">
+                <div class="col grid-option" data-aos="fade-down">
                     <div><i class='bx bx-rotate-left'></i></div>
                     <div>
                         <p>Free Returns</p>
                         Within 30 days
                     </div>
                 </div>
-                <div class="col grid-option">
+                <div class="col grid-option" data-aos="fade-down">
                     <div><i class='bx bx-info-circle'></i></div>
                     <div>
                         <p>Get 20% Off 1 Items</p>
                         When you sign up
                     </div>
                 </div>
-                <div class="col grid-option">
+                <div class="col grid-option" data-aos="fade-down">
                     <div><i class='bx bx-support'></i></div>
                     <div>
                         <p>We Support</p>
@@ -635,7 +852,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer1">
+        <div class="footer1" data-aos="fade-up">
 
             <form action="">
                 <h2>Get The Latest Deals</h2>
@@ -645,7 +862,7 @@
             </form>
         </div>
         <!-- Footer -->
-        <footer class="text-center text-lg-start bg-white text-muted">
+        <footer class="text-center text-lg-start bg-white text-muted" data-aos="fade-right">
             <!-- Section: Social media -->
             <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
                 <!-- Left -->
@@ -766,16 +983,19 @@
             <!-- Copyright -->
         </footer>
         <!-- Footer -->
+
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="src/js/main.js"></script>
-        <script src="src/js/shop.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
