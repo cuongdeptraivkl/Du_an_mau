@@ -2,12 +2,7 @@
     position: relative;
     cursor: pointer;
 }
-.UserNew img{
-    width: 15px;
-    height: 15px;
-    line-height: 15px;
-    border-radius: 50%;
-}
+
 .UserNew::before{
     content: "";
     height: 20px ;
